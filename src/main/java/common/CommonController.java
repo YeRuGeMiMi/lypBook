@@ -12,7 +12,7 @@ public class CommonController extends Controller {
         if (getSessionAttr("user") == null){
             renderJsp("/jsp/login.jsp");
         }else{
-            renderJsp("/index.jsp");
+            forwardAction("/main");
         }
     }
 }

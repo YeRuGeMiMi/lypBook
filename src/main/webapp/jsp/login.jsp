@@ -11,7 +11,7 @@
     <title></title>
 </head>
 <body>
-<form method="post" action="" >
+<form method="post" action="login" >
     <table align="center">
         <tr>
             <td>用户名</td>

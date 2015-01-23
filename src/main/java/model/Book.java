@@ -13,7 +13,21 @@ public class Book implements Serializable{
     private String c_num;           //分类号
     private String publishName;     //出版单位
     private int publishTime;        //出版时间
-    private float price;            //价格
+    private double price;            //价格
+
+    public Book(){
+
+    }
+
+    public Book(int bid, String name, String author, String c_num, String publishName, int publishTime, double price) {
+        this.bid = bid;
+        this.name = name;
+        this.author = author;
+        this.c_num = c_num;
+        this.publishName = publishName;
+        this.publishTime = publishTime;
+        this.price = price;
+    }
 
     public int getBid() {
         return bid;
@@ -63,11 +77,11 @@ public class Book implements Serializable{
         this.publishTime = publishTime;
     }
 
-    public float getPrice() {
+    public double getPrice() {
         return price;
     }
 
-    public void setPrice(float price) {
+    public void setPrice(double price) {
         this.price = price;
     }
 }

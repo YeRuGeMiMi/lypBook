@@ -21,7 +21,7 @@
     <context:component-scan base-package="dao.impl"/>
 
     <!-- 扫描Service -->
-    <context:component-scan base-package="yfl.service.impl"/>
+    <context:component-scan base-package="service.impl"/>
 
     <!-- 配置dbcp数据源 -->
     <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
@@ -41,7 +41,7 @@
 
     <!--AOP事务增强-->
     <aop:config proxy-target-class="true">
-        <aop:pointcut id="serviceMethod" expression="execution(* yfl.service.impl..*(..))"/>
+        <aop:pointcut id="serviceMethod" expression="execution(* service.impl..*(..))"/>
         <aop:advisor pointcut-ref="serviceMethod" advice-ref="txAdvice"/>
     </aop:config>
     <tx:advice id="txAdvice" transaction-manager="transactionManager">

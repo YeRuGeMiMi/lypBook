@@ -10,5 +10,5 @@ public interface UserDao {
     /**
      * 验证用户密码登陆
      */
-    public User getUserByLogin(String username,String password);
+    public User getUserByLogin(String username, String password);
 }

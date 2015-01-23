@@ -26,11 +26,11 @@ public class UserDaoImpl implements UserDao {
         jdbc.query(sqlStr,new Object[]{username,password},new RowCallbackHandler(){
             @Override
             public void processRow(ResultSet resultSet) throws SQLException {
-                if(resultSet == null){
+
                     user.setUid(resultSet.getInt("uid"));
                     user.setUsername(resultSet.getString("username"));
                     user.setPassword(resultSet.getString("password"));
-                }
+
             }
         });
         return user;
